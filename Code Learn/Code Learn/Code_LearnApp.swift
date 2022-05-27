@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct Code_LearnApp: App {
+    
+    @AppStorage("isLearning") var isLearning: Bool = false
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

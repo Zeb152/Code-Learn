@@ -33,12 +33,17 @@ struct boxTitleView: View {
                     Text(title)
                         .font(.title2)
                         .fontWeight(.semibold)
+                        .foregroundColor(Color.primary)
                     
                     Text(description)
                         .font(.footnote)
                         .foregroundColor(.secondary)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
                     
                 }//vstack
+                
+                Image(systemName: "arrow.right")
                 
                 
             }//hstack

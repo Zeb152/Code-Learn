@@ -20,10 +20,20 @@ struct homeScreenView: View {
                         
                         boxAboutTitleView(title: "Coding", icon: "keyboard.fill")
                         
-                        boxTitleView(image: "swiftlogo", title: "Swift", description: "This coding language is created by Apple for a great beginner language or app development.")
+                        
+                        NavigationLink(destination: swiftLearningPage(), label: {
+                            
+                            boxTitleView(image: "swiftlogo", title: "Swift", description: "This coding language is created by Apple for a great beginner language or app development.")
+                            
+                        })
+                        
                             
                         
-                        boxTitleView(image: "csharplogo", title: "C-Sharp", description: "This language was developed by Microsoft and is mainly used for developing games.")
+                        NavigationLink(destination: csharpAboutPage(), label: {
+                            
+                            boxTitleView(image: "csharplogo", title: "C-Sharp", description: "This language was developed by Microsoft and is mainly used for developing games.")
+                            
+                        })
                         
                         
                     }
@@ -31,7 +41,7 @@ struct homeScreenView: View {
                     
                 }//vstack
                 .padding(.horizontal)
-                .frame(width: 395)
+                .frame(minWidth: 395, maxWidth: 700)
                 
             }//scroll
             .navigationTitle("Home")
@@ -45,6 +55,7 @@ struct homeScreenView: View {
 struct homeScreenView_Previews: PreviewProvider {
     static var previews: some View {
         homeScreenView()
+            .previewInterfaceOrientation(.portrait)
             
     }
 }

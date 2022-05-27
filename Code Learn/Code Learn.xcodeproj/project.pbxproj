@@ -15,6 +15,10 @@
 		D54A4BD7284158C4004466B0 /* boxTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54A4BD6284158C4004466B0 /* boxTitleView.swift */; };
 		D54A4BD928416193004466B0 /* boxAboutTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54A4BD828416193004466B0 /* boxAboutTitleView.swift */; };
 		D54A4BDB28416D2F004466B0 /* learnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54A4BDA28416D2F004466B0 /* learnView.swift */; };
+		D5DC95392841741F00E9CB5D /* learnLanguageBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC95382841741F00E9CB5D /* learnLanguageBoxView.swift */; };
+		D5DC953B2841775900E9CB5D /* swiftLearningPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC953A2841775900E9CB5D /* swiftLearningPage.swift */; };
+		D5DC953D2841872A00E9CB5D /* swiftQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC953C2841872900E9CB5D /* swiftQuestionsView.swift */; };
+		D5DC953F2841877700E9CB5D /* csharpAboutPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC953E2841877700E9CB5D /* csharpAboutPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		D54A4BD6284158C4004466B0 /* boxTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boxTitleView.swift; sourceTree = "<group>"; };
 		D54A4BD828416193004466B0 /* boxAboutTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boxAboutTitleView.swift; sourceTree = "<group>"; };
 		D54A4BDA28416D2F004466B0 /* learnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = learnView.swift; sourceTree = "<group>"; };
+		D5DC95382841741F00E9CB5D /* learnLanguageBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = learnLanguageBoxView.swift; sourceTree = "<group>"; };
+		D5DC953A2841775900E9CB5D /* swiftLearningPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftLearningPage.swift; sourceTree = "<group>"; };
+		D5DC953C2841872900E9CB5D /* swiftQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftQuestionsView.swift; sourceTree = "<group>"; };
+		D5DC953E2841877700E9CB5D /* csharpAboutPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = csharpAboutPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +67,8 @@
 		D54A4BC328415634004466B0 /* Code Learn */ = {
 			isa = PBXGroup;
 			children = (
-				D54A4BD5284158B0004466B0 /* Views */,
 				D54A4BC428415634004466B0 /* Code_LearnApp.swift */,
+				D54A4BD5284158B0004466B0 /* Views */,
 				D54A4BD428415853004466B0 /* App */,
 				D54A4BC828415636004466B0 /* Assets.xcassets */,
 				D54A4BCA28415636004466B0 /* Preview Content */,
@@ -82,6 +90,9 @@
 				D54A4BC628415634004466B0 /* ContentView.swift */,
 				D54A4BD228415844004466B0 /* homeScreenView.swift */,
 				D54A4BDA28416D2F004466B0 /* learnView.swift */,
+				D5DC953A2841775900E9CB5D /* swiftLearningPage.swift */,
+				D5DC953C2841872900E9CB5D /* swiftQuestionsView.swift */,
+				D5DC953E2841877700E9CB5D /* csharpAboutPage.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -91,6 +102,7 @@
 			children = (
 				D54A4BD6284158C4004466B0 /* boxTitleView.swift */,
 				D54A4BD828416193004466B0 /* boxAboutTitleView.swift */,
+				D5DC95382841741F00E9CB5D /* learnLanguageBoxView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,10 +177,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5DC95392841741F00E9CB5D /* learnLanguageBoxView.swift in Sources */,
 				D54A4BD928416193004466B0 /* boxAboutTitleView.swift in Sources */,
+				D5DC953D2841872A00E9CB5D /* swiftQuestionsView.swift in Sources */,
 				D54A4BDB28416D2F004466B0 /* learnView.swift in Sources */,
 				D54A4BC728415634004466B0 /* ContentView.swift in Sources */,
+				D5DC953B2841775900E9CB5D /* swiftLearningPage.swift in Sources */,
 				D54A4BC528415634004466B0 /* Code_LearnApp.swift in Sources */,
+				D5DC953F2841877700E9CB5D /* csharpAboutPage.swift in Sources */,
 				D54A4BD328415844004466B0 /* homeScreenView.swift in Sources */,
 				D54A4BD7284158C4004466B0 /* boxTitleView.swift in Sources */,
 			);
