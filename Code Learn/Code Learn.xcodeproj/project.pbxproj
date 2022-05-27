@@ -11,6 +11,10 @@
 		D54A4BC728415634004466B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54A4BC628415634004466B0 /* ContentView.swift */; };
 		D54A4BC928415636004466B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D54A4BC828415636004466B0 /* Assets.xcassets */; };
 		D54A4BCC28415636004466B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D54A4BCB28415636004466B0 /* Preview Assets.xcassets */; };
+		D54A4BD328415844004466B0 /* homeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54A4BD228415844004466B0 /* homeScreenView.swift */; };
+		D54A4BD7284158C4004466B0 /* boxTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54A4BD6284158C4004466B0 /* boxTitleView.swift */; };
+		D54A4BD928416193004466B0 /* boxAboutTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54A4BD828416193004466B0 /* boxAboutTitleView.swift */; };
+		D54A4BDB28416D2F004466B0 /* learnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54A4BDA28416D2F004466B0 /* learnView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		D54A4BC628415634004466B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D54A4BC828415636004466B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D54A4BCB28415636004466B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D54A4BD228415844004466B0 /* homeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeScreenView.swift; sourceTree = "<group>"; };
+		D54A4BD6284158C4004466B0 /* boxTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boxTitleView.swift; sourceTree = "<group>"; };
+		D54A4BD828416193004466B0 /* boxAboutTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boxAboutTitleView.swift; sourceTree = "<group>"; };
+		D54A4BDA28416D2F004466B0 /* learnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = learnView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +59,9 @@
 		D54A4BC328415634004466B0 /* Code Learn */ = {
 			isa = PBXGroup;
 			children = (
+				D54A4BD5284158B0004466B0 /* Views */,
 				D54A4BC428415634004466B0 /* Code_LearnApp.swift */,
-				D54A4BC628415634004466B0 /* ContentView.swift */,
+				D54A4BD428415853004466B0 /* App */,
 				D54A4BC828415636004466B0 /* Assets.xcassets */,
 				D54A4BCA28415636004466B0 /* Preview Content */,
 			);
@@ -65,6 +74,25 @@
 				D54A4BCB28415636004466B0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D54A4BD428415853004466B0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D54A4BC628415634004466B0 /* ContentView.swift */,
+				D54A4BD228415844004466B0 /* homeScreenView.swift */,
+				D54A4BDA28416D2F004466B0 /* learnView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D54A4BD5284158B0004466B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D54A4BD6284158C4004466B0 /* boxTitleView.swift */,
+				D54A4BD828416193004466B0 /* boxAboutTitleView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D54A4BD928416193004466B0 /* boxAboutTitleView.swift in Sources */,
+				D54A4BDB28416D2F004466B0 /* learnView.swift in Sources */,
 				D54A4BC728415634004466B0 /* ContentView.swift in Sources */,
 				D54A4BC528415634004466B0 /* Code_LearnApp.swift in Sources */,
+				D54A4BD328415844004466B0 /* homeScreenView.swift in Sources */,
+				D54A4BD7284158C4004466B0 /* boxTitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
