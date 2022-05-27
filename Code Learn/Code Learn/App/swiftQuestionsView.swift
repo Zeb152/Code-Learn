@@ -9,40 +9,16 @@ import SwiftUI
 
 struct swiftQuestionsView: View {
     
-    @State var userAnswer: String = ""
-    
     var body: some View {
         
-        NavigationView{
+        TabView{
             
-            VStack(spacing: 30){
-                
-                GroupBox {
-                    
-                    Text("Swift")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                
-                }//gbox
-                
-                
-                Text("Question heres so you got a bot?")
-                
-                
-                GroupBox(){
-                    
-                    TextField("type answer", text: $userAnswer)
-                    
-                }
-                
-                
-                
-            }//vstack
-            .navigationBarHidden(true)
-            .padding(.horizontal, 25)
+            questionView()
+            questionView()
+            questionView()
             
         }
-        .navigationViewStyle(StackNavigationViewStyle())
+        .tabViewStyle(.page)
         
     }
 }

@@ -19,6 +19,7 @@
 		D5DC953B2841775900E9CB5D /* swiftLearningPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC953A2841775900E9CB5D /* swiftLearningPage.swift */; };
 		D5DC953D2841872A00E9CB5D /* swiftQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC953C2841872900E9CB5D /* swiftQuestionsView.swift */; };
 		D5DC953F2841877700E9CB5D /* csharpAboutPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC953E2841877700E9CB5D /* csharpAboutPage.swift */; };
+		D5DC95412841949D00E9CB5D /* questionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC95402841949D00E9CB5D /* questionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		D5DC953A2841775900E9CB5D /* swiftLearningPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftLearningPage.swift; sourceTree = "<group>"; };
 		D5DC953C2841872900E9CB5D /* swiftQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftQuestionsView.swift; sourceTree = "<group>"; };
 		D5DC953E2841877700E9CB5D /* csharpAboutPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = csharpAboutPage.swift; sourceTree = "<group>"; };
+		D5DC95402841949D00E9CB5D /* questionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				D54A4BD6284158C4004466B0 /* boxTitleView.swift */,
 				D54A4BD828416193004466B0 /* boxAboutTitleView.swift */,
 				D5DC95382841741F00E9CB5D /* learnLanguageBoxView.swift */,
+				D5DC95402841949D00E9CB5D /* questionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				D5DC953B2841775900E9CB5D /* swiftLearningPage.swift in Sources */,
 				D54A4BC528415634004466B0 /* Code_LearnApp.swift in Sources */,
 				D5DC953F2841877700E9CB5D /* csharpAboutPage.swift in Sources */,
+				D5DC95412841949D00E9CB5D /* questionView.swift in Sources */,
 				D54A4BD328415844004466B0 /* homeScreenView.swift in Sources */,
 				D54A4BD7284158C4004466B0 /* boxTitleView.swift in Sources */,
 			);
