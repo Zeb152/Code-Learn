@@ -9,7 +9,7 @@ import SwiftUI
 
 struct swiftQuestionsView: View {
     
-   var userAnswer = ""
+    @State var userAnswer: String = ""
     
     var body: some View {
         
@@ -26,18 +26,20 @@ struct swiftQuestionsView: View {
                 }//gbox
                 
                 
-                Text("Question here")
+                Text("Question heres so you got a bot?")
                 
                 
                 GroupBox(){
                     
-                    //TextField("type answer", text: $userAnswer)
+                    TextField("type answer", text: $userAnswer)
                     
                 }
                 
                 
+                
             }//vstack
             .navigationBarHidden(true)
+            .padding(.horizontal, 25)
             
         }
         .navigationViewStyle(StackNavigationViewStyle())
