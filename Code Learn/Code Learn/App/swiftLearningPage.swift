@@ -11,6 +11,8 @@ struct swiftLearningPage: View {
     
     @AppStorage("isSwiftLearning") var isSwiftLearning: Bool = false
     
+    @State private var isAnimating: Bool = false
+    
     
     var body: some View {
         
@@ -31,6 +33,7 @@ struct swiftLearningPage: View {
                             .font(.largeTitle)
                             .fontWeight(.bold)
                             .multilineTextAlignment(.leading)
+                            .offset(x: isAnimating ? 0 : -15)
                         
                         Spacer()
                         
@@ -55,6 +58,9 @@ struct swiftLearningPage: View {
                             }
                             
                         })
+                        .offset(x: isAnimating ? 0 : 15)
+                        
+                        
                     }//hstack
                     .padding(.horizontal)
                     
@@ -66,6 +72,7 @@ struct swiftLearningPage: View {
                             .lineSpacing(5)
                         
                     }//gbox
+                    .offset(y: isAnimating ? 0 : -15)
                     
                     
                 }//vstack
@@ -77,6 +84,16 @@ struct swiftLearningPage: View {
             .navigationBarHidden(true)
             .edgesIgnoringSafeArea(.top)
             .navigationTitle("Swift")
+            .onAppear{
+                
+                withAnimation(.easeOut(duration: 0.5)){
+                    
+                    isAnimating = true
+                    
+                }
+                
+            }
+
             
         }//navigation
         .navigationViewStyle(StackNavigationViewStyle())

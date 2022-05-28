@@ -36,7 +36,38 @@ struct homeScreenView: View {
                         })
                         
                         
-                    }
+                    }//gbox
+                    
+                    
+                    GroupBox(){
+                        
+                        boxAboutTitleView(title: "Info", icon: "info.circle.fill")
+                        
+                        GroupBox{
+                            
+                            infoInBox(header: "Name", content: "Codelearn")
+                            
+                            
+                            Divider()
+                                .padding(.vertical, 1)
+                            
+                            infoInBox(header: "Version", content: "1.0")
+                            
+                            
+                            Divider()
+                                .padding(.vertical, 1)
+                            
+                            infoInBox(header: "Developer", content: "ZLabZ")
+                            
+                            
+                            Divider()
+                                .padding(.vertical, 1)
+                            
+                            infoInBox(header: "Owner", content: "Harper Bledsoe")
+                            
+                        }
+                        
+                    }//gbox
                     
                     
                 }//vstack

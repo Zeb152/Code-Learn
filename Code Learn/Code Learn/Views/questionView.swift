@@ -13,22 +13,27 @@ struct questionView: View {
     
     @State var userAnswer: String = ""
     
-    var swiftQuestions: Array = ["What do you put before a variable name to make it a constant value?", "What is the keyword to start a function?", "q3"]
+    var swiftQuestions: Array = ["What do you put before a variable name to make it a constant value?", "What is the keyword to start a function?", "What is the type that stores a variable of a number with a decimal?", "What is the keyword needed to declare a changeable variable?"]
     
     
-   @State var questionNum: Int?
+    @State var questionNum: Int = Int.random(in: 0...3)
     
     
-    
+    @State var isQuestionWrong: Bool = false
     
     @State var isQuestionRight: Bool = false
+    
+    @State private var isAnimating: Bool = false
     
     
     //body
 
     var body: some View {
         
+        
+        
         NavigationView{
+            
             
             
             VStack(spacing: 30){
@@ -39,6 +44,23 @@ struct questionView: View {
                         
                         HStack {
                             
+                            if isQuestionWrong == false{
+                                
+                                Image(systemName: "circle")
+                                    .foregroundColor(Color(red: 254/255, green: 110/255, blue: 48/255))
+                                    .scaleEffect(isAnimating ? 1.0 : 0.5)
+                                
+                            }
+                            
+                            else if isQuestionWrong == true {
+                                
+                                Image(systemName: "xmark.app")
+                                    .foregroundColor(Color.red)
+                                    .scaleEffect(isAnimating ? 1.0 : 0.5)
+                                
+                            }
+                            
+                            
                             Text("Swift")
                                 .font(.largeTitle)
                                 .fontWeight(.bold)
@@ -47,9 +69,14 @@ struct questionView: View {
                             Image(systemName: "swift")
                                 .foregroundColor(Color(red: 254/255, green: 110/255, blue: 48/255))
                             
-                        }
+                        
+                        
+                        }//hstack
+                        
+                        
                     
                     }//gbox
+                    .offset(y: isAnimating ? 0 : -10)
                     
                     
                     
@@ -57,34 +84,51 @@ struct questionView: View {
                 
                 //questionNum =  Int.random(in: 0...2)
                 
-                Text(swiftQuestions[questionNum!])
+                
+                
+                Text(swiftQuestions[questionNum])
                     .font(.headline)
                 
                 
                 Spacer()
                 
                 
-                Button(action: {
+                if isQuestionRight == true {
+                    
+                    Button(action: {
+                        
+                        
+                        self.randomInt()
+                        
+                        isQuestionRight = false
+                        
+                        userAnswer = ""
+                        
+                        
+                    }, label: {
+                        
+                        
+                        Text("Next")
+                            .font(.title2)
+                            .fontWeight(.semibold)
+                            .padding(.horizontal, 7)
+                            .foregroundColor(Color(red: 254/255, green: 110/255, blue: 48/255))
+                            .padding(8)
+                            
+                            
+                        
+                        
+                        
+                    })
                     
                     
+                }//if
+                
+                else if isQuestionRight == false{
                     
+                    EmptyView()
                     
-                    
-                }, label: {
-                    
-                    
-                    Text("Next")
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                        .padding(.horizontal, 7)
-                        .foregroundColor(.primary)
-                        .padding(8)
-                        .background(Color.secondary)
-                        .cornerRadius(10)
-                    
-                    
-                    
-                })
+                }
                 
                 
                 
@@ -94,8 +138,19 @@ struct questionView: View {
                         
                         if isQuestionRight == false {
                             
-                            Image(systemName: "xmark")
-                                .padding(.trailing, 10)
+                            Button(action: {
+                                
+                                userAnswer = ""
+                                
+                                isQuestionWrong = false
+                                
+                            }, label: {
+                                
+                                Image(systemName: "xmark")
+                                    .padding(.trailing, 10)
+                                
+                                
+                            })
                             
                         }
                         
@@ -108,17 +163,13 @@ struct questionView: View {
                         }
                         
                         
-                        TextField("type answer", text: $userAnswer)
+                        TextField("Type answer here", text: $userAnswer)
                             .onSubmit {
+                                
+                                isQuestionWrong = false
 
                                 checkIfCorrect()
                                 
-                                if isQuestionRight == true {
-                                    
-                                    presentationMode.wrappedValue.dismiss()
-                                    
-                                }
-
                             }//textfeild
                         
                         
@@ -144,6 +195,15 @@ struct questionView: View {
                     .foregroundColor(.primary)
                 
             }))
+            .onAppear{
+                
+                withAnimation(.easeOut(duration: 0.5)){
+                    
+                    isAnimating = true
+                    
+                }
+                
+            }
 
         
         }//navigation
@@ -154,6 +214,10 @@ struct questionView: View {
     
     func checkIfCorrect(){
         
+        
+        //: MARK: QUESTION 1
+        
+        //"What do you put before a variable name to make it a constant value?
         if questionNum == 0 {
             
             if userAnswer == "let" || userAnswer == "Let" {
@@ -167,7 +231,7 @@ struct questionView: View {
             
             else {
                 
-                print("NO DAB")
+                isQuestionWrong = true
                 
             }
             
@@ -175,9 +239,12 @@ struct questionView: View {
         
         
         
+        //: MARK: QUESTION 2
+        
+        //What is the keyword to start a function?
         if questionNum == 1 {
             
-            if userAnswer == "yes" || userAnswer == "Yes" {
+            if userAnswer == "func" || userAnswer == "Func" {
                 
                 print("COrreECYTEW")
                 
@@ -187,28 +254,51 @@ struct questionView: View {
             
             else {
                 
-                print("NO BAD")
+                isQuestionWrong = true
                 
             }
             
         }//user question
+        
+        
+        
+        
+        //: MARK: QUESTION 3
+        //What is the type that stores a variable of a number with a decimal?
         
         if questionNum == 2 {
             
-            if userAnswer == "no" || userAnswer == "No" {
+            if userAnswer == "float" || userAnswer == "Float" {
                 
-                print("COrreECYTEW")
                 isQuestionRight = true
             }//user answer
             
             else {
                 
-                print("NO BAD")
+                isQuestionWrong = true
                 
             }
             
         }//user question
         
+        
+        //: MARK: QUESTION 4
+        //What is the keyword needed to declare a changeable variable?
+        
+        if questionNum == 3 {
+            
+            if userAnswer == "var" || userAnswer == "Var" {
+                
+                isQuestionRight = true
+            }//user answer
+            
+            else {
+                
+                isQuestionWrong = true
+                
+            }
+            
+        }//user question
         
         
     }//function
@@ -216,7 +306,7 @@ struct questionView: View {
     
     func randomInt(){
         
-        questionNum = Int.random(in: 0...2)
+       questionNum = Int.random(in: 0...3)
         
     }//func random int
 }

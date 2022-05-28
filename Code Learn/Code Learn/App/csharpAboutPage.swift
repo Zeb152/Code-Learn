@@ -11,6 +11,8 @@ struct csharpAboutPage: View {
     
     @AppStorage("isCSharpLearning") var isCSharpLearning: Bool = false
     
+    @State private var isAnimating: Bool = false
+    
     var body: some View {
         
         NavigationView{
@@ -30,6 +32,7 @@ struct csharpAboutPage: View {
                             .font(.largeTitle)
                             .fontWeight(.bold)
                             .multilineTextAlignment(.leading)
+                            .offset(x: isAnimating ? 0 : -15)
                         
                         Spacer()
                         
@@ -53,6 +56,8 @@ struct csharpAboutPage: View {
                             }
                             
                         })
+                        .offset(x: isAnimating ? 0 : 15)
+                        
                     }//hstack
                     .padding(.horizontal)
                     
@@ -64,6 +69,7 @@ struct csharpAboutPage: View {
                             .lineSpacing(5)
                         
                     }//gbox
+                    .offset(y: isAnimating ? 0 : -15)
                     
                     
                 }//vstack
@@ -75,6 +81,16 @@ struct csharpAboutPage: View {
             .navigationBarHidden(true)
             .edgesIgnoringSafeArea(.top)
             .navigationTitle("C-Sharp")
+            .onAppear{
+                
+                withAnimation(.easeOut(duration: 0.5)){
+                    
+                    isAnimating = true
+                    
+                }
+                
+            }
+            
             
         }//navigation
         .navigationViewStyle(StackNavigationViewStyle())

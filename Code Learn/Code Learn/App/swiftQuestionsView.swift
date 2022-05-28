@@ -11,7 +11,17 @@ struct swiftQuestionsView: View {
     
     var body: some View {
         
-        Text("hi")
+        GroupBox(){
+            
+            Text("In construction")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .padding(.bottom, 5)
+            
+            Text("Sorry, please come back later!")
+                .font(.footnote)
+            
+        }
         
     }
 }

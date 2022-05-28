@@ -15,6 +15,7 @@
 		D54A4BD7284158C4004466B0 /* boxTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54A4BD6284158C4004466B0 /* boxTitleView.swift */; };
 		D54A4BD928416193004466B0 /* boxAboutTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54A4BD828416193004466B0 /* boxAboutTitleView.swift */; };
 		D54A4BDB28416D2F004466B0 /* learnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54A4BDA28416D2F004466B0 /* learnView.swift */; };
+		D5B1D83128429EF400CE1180 /* infoInBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B1D83028429EF400CE1180 /* infoInBox.swift */; };
 		D5DC95392841741F00E9CB5D /* learnLanguageBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC95382841741F00E9CB5D /* learnLanguageBoxView.swift */; };
 		D5DC953B2841775900E9CB5D /* swiftLearningPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC953A2841775900E9CB5D /* swiftLearningPage.swift */; };
 		D5DC953D2841872A00E9CB5D /* swiftQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC953C2841872900E9CB5D /* swiftQuestionsView.swift */; };
@@ -32,6 +33,7 @@
 		D54A4BD6284158C4004466B0 /* boxTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boxTitleView.swift; sourceTree = "<group>"; };
 		D54A4BD828416193004466B0 /* boxAboutTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boxAboutTitleView.swift; sourceTree = "<group>"; };
 		D54A4BDA28416D2F004466B0 /* learnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = learnView.swift; sourceTree = "<group>"; };
+		D5B1D83028429EF400CE1180 /* infoInBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoInBox.swift; sourceTree = "<group>"; };
 		D5DC95382841741F00E9CB5D /* learnLanguageBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = learnLanguageBoxView.swift; sourceTree = "<group>"; };
 		D5DC953A2841775900E9CB5D /* swiftLearningPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftLearningPage.swift; sourceTree = "<group>"; };
 		D5DC953C2841872900E9CB5D /* swiftQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftQuestionsView.swift; sourceTree = "<group>"; };
@@ -73,7 +75,6 @@
 				D54A4BD5284158B0004466B0 /* Views */,
 				D54A4BD428415853004466B0 /* App */,
 				D54A4BC828415636004466B0 /* Assets.xcassets */,
-				D5DC953A2841775900E9CB5D /* swiftLearningPage.swift */,
 				D54A4BCA28415636004466B0 /* Preview Content */,
 			);
 			path = "Code Learn";
@@ -94,6 +95,7 @@
 				D54A4BD228415844004466B0 /* homeScreenView.swift */,
 				D54A4BDA28416D2F004466B0 /* learnView.swift */,
 				D5DC953C2841872900E9CB5D /* swiftQuestionsView.swift */,
+				D5DC953A2841775900E9CB5D /* swiftLearningPage.swift */,
 				D5DC953E2841877700E9CB5D /* csharpAboutPage.swift */,
 			);
 			path = App;
@@ -106,6 +108,7 @@
 				D54A4BD828416193004466B0 /* boxAboutTitleView.swift */,
 				D5DC95382841741F00E9CB5D /* learnLanguageBoxView.swift */,
 				D5DC95402841949D00E9CB5D /* questionView.swift */,
+				D5B1D83028429EF400CE1180 /* infoInBox.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				D5DC953F2841877700E9CB5D /* csharpAboutPage.swift in Sources */,
 				D5DC95412841949D00E9CB5D /* questionView.swift in Sources */,
 				D54A4BD328415844004466B0 /* homeScreenView.swift in Sources */,
+				D5B1D83128429EF400CE1180 /* infoInBox.swift in Sources */,
 				D54A4BD7284158C4004466B0 /* boxTitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
