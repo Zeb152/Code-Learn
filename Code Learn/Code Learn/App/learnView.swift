@@ -9,9 +9,11 @@ import SwiftUI
 
 struct learnView: View {
     
-    @AppStorage("isSwiftLearning") var isSwiftLearning: Bool?
+    @AppStorage("isSwiftLearning") var isSwiftLearning: Bool = false
     
-    @AppStorage("isCSharpLearning") var isCSharpLearning: Bool?
+    @State private var isShowingSwiftQuestions: Bool = false
+    
+    @AppStorage("isCSharpLearning") var isCSharpLearning: Bool = false
     
     var body: some View {
         
@@ -33,11 +35,17 @@ struct learnView: View {
                 
                 if isSwiftLearning == true {
                     
-                    NavigationLink(destination: swiftQuestionsView(), label: {
+                    Button(action: {
+                        
+                        isShowingSwiftQuestions = true
+                        
+                    }, label: {
                         
                         learnLanguageBoxView(image: "swiftlogo", title: "Swift")
                         
-                    })
+                    }).sheet(isPresented: $isShowingSwiftQuestions){
+                        questionView()
+                    }
                     
                 }
                 

@@ -73,6 +73,7 @@
 				D54A4BD5284158B0004466B0 /* Views */,
 				D54A4BD428415853004466B0 /* App */,
 				D54A4BC828415636004466B0 /* Assets.xcassets */,
+				D5DC953A2841775900E9CB5D /* swiftLearningPage.swift */,
 				D54A4BCA28415636004466B0 /* Preview Content */,
 			);
 			path = "Code Learn";
@@ -92,7 +93,6 @@
 				D54A4BC628415634004466B0 /* ContentView.swift */,
 				D54A4BD228415844004466B0 /* homeScreenView.swift */,
 				D54A4BDA28416D2F004466B0 /* learnView.swift */,
-				D5DC953A2841775900E9CB5D /* swiftLearningPage.swift */,
 				D5DC953C2841872900E9CB5D /* swiftQuestionsView.swift */,
 				D5DC953E2841877700E9CB5D /* csharpAboutPage.swift */,
 			);

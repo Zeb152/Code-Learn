@@ -11,14 +11,7 @@ struct swiftQuestionsView: View {
     
     var body: some View {
         
-        TabView{
-            
-            questionView()
-            questionView()
-            questionView()
-            
-        }
-        .tabViewStyle(.page)
+        Text("hi")
         
     }
 }
