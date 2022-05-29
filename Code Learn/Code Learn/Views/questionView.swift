@@ -13,10 +13,17 @@ struct questionView: View {
     
     @State var userAnswer: String = ""
     
-    var swiftQuestions: Array = ["What do you put before a variable name to make it a constant value?", "What is the keyword to start a function?", "What is the type that stores a variable of a number with a decimal?", "What is the keyword needed to declare a changeable variable?"]
+    var swiftQuestions: Array = ["What do you put before a variable name to make it a constant value?",
+                                 "What is the keyword to start a function?",
+                                 "What is the type that stores a variable of a number with a decimal?",
+                                 "What is the keyword needed to declare a changeable variable?",
+                                 "What do you reference before declaring a variable to save it on App Storage? (Hint: It begins with an @)",
+                                 "What is the type of variable that stores a whole number?",
+                                 "What is the type of variable that stores a true / false statement?"]
     
     
-    @State var questionNum: Int = Int.random(in: 0...3)
+    //: MARK: CHANGE Q RANGE HERE
+    @State var questionNum: Int = Int.random(in: 0...6)
     
     
     @State var isQuestionWrong: Bool = false
@@ -26,7 +33,7 @@ struct questionView: View {
     @State private var isAnimating: Bool = false
     
     
-    //body
+    //: MARK: START OF BODY
 
     var body: some View {
         
@@ -38,6 +45,8 @@ struct questionView: View {
             
             VStack(spacing: 30){
                 
+                
+                //: MARK: TITLE
                 HStack{
                     
                     GroupBox {
@@ -71,28 +80,34 @@ struct questionView: View {
                             
                         
                         
-                        }//hstack
+                        }//hstack -- TITLE
                         
                         
                     
-                    }//gbox
+                    }//gbox -- TITLE
                     .offset(y: isAnimating ? 0 : -10)
                     
                     
                     
-                }//hstack
-                
-                //questionNum =  Int.random(in: 0...2)
+                }//hstack -- title
                 
                 
                 
+                
+                
+                //: MARK: QUESTION TEXT
                 Text(swiftQuestions[questionNum])
                     .font(.headline)
+                
+                
                 
                 
                 Spacer()
                 
                 
+                
+                
+                //: MARK: NEXT BUTTON
                 if isQuestionRight == true {
                     
                     Button(action: {
@@ -132,10 +147,14 @@ struct questionView: View {
                 
                 
                 
+                //: MARK: TEXT FIELD BOX
+                
                 GroupBox(){
                     
                     HStack{
                         
+                        
+                        //X BUTTON IS FALSE
                         if isQuestionRight == false {
                             
                             Button(action: {
@@ -154,6 +173,7 @@ struct questionView: View {
                             
                         }
                         
+                        //CHECK IMAGE IF RIGHT
                         else if isQuestionRight == true {
                             
                             Image(systemName: "checkmark")
@@ -162,7 +182,7 @@ struct questionView: View {
                             
                         }
                         
-                        
+                        // TEXT FIELD
                         TextField("Type answer here", text: $userAnswer)
                             .onSubmit {
                                 
@@ -176,14 +196,14 @@ struct questionView: View {
                         
                     }//hstack
                     
-                }//gbox
+                }//GROUP BOX FOR TEXT FIELD
                 .padding(.bottom, 35)
                 
                 
                 
                 
                 
-            }//vstack
+            }//: MARK: MAIN VSTACK END MODIFIERS
             .padding(.horizontal, 25)
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
@@ -204,13 +224,25 @@ struct questionView: View {
                 }
                 
             }
+            
+            //: MARK: END OF MAIN VSTACK MODIFIERS
 
         
-        }//navigation
-
+        }//END OF NAVIGATION
         
         
     }//body
+    
+    //: MARK: END OF BODY
+    
+    
+    
+    
+    
+    
+    
+    
+    //: MARK: CHECK IF CORRECT FUNC
     
     func checkIfCorrect(){
         
@@ -239,6 +271,8 @@ struct questionView: View {
         
         
         
+        
+        
         //: MARK: QUESTION 2
         
         //What is the keyword to start a function?
@@ -263,6 +297,8 @@ struct questionView: View {
         
         
         
+        
+        
         //: MARK: QUESTION 3
         //What is the type that stores a variable of a number with a decimal?
         
@@ -280,6 +316,9 @@ struct questionView: View {
             }
             
         }//user question
+        
+        
+        
         
         
         //: MARK: QUESTION 4
@@ -301,14 +340,94 @@ struct questionView: View {
         }//user question
         
         
+        
+        
+        
+        //: MARK: QUESTION 5
+        //What is the keyword needed to declare a changeable variable?
+        
+        //CHANGE
+        if questionNum == 4 {
+            
+            if userAnswer == "@AppStorage" || userAnswer == "@appstorage" {
+                
+                isQuestionRight = true
+            }//user answer
+            
+            else {
+                
+                isQuestionWrong = true
+                
+            }
+            
+        }//user question
+        
+        
+        
+        
+        //: MARK: QUESTION 6
+        //What is the type that stores a variable of a whole number?
+        
+        //CHANGE
+        if questionNum == 5 {
+            
+            if userAnswer == "Int" || userAnswer == "int" {
+                
+                isQuestionRight = true
+            }//user answer
+            
+            else {
+                
+                isQuestionWrong = true
+                
+            }
+            
+        }//end of main if
+        
+        
+        
+        
+        //: MARK: QUESTION 7
+        //What is the type of variable that stores a true / false statement?
+        
+        //CHANGE
+        if questionNum == 6 {
+            
+            if userAnswer == "Bool" || userAnswer == "bool" {
+                
+                isQuestionRight = true
+            }//user answer
+            
+            else {
+                
+                isQuestionWrong = true
+                
+            }
+            
+        }//end of main if
+        
+        
+        
+        
     }//function
     
     
+    
+    
+    
+    //: MARK: RANDOMINT FUNC
+    
+    
     func randomInt(){
-        
-       questionNum = Int.random(in: 0...3)
+
+       questionNum = Int.random(in: 0...6)
         
     }//func random int
+    
+    
+    //: MARK: CHANGE Q RANGE HERE
+    
+    
 }
 
 struct questionView_Previews: PreviewProvider {
